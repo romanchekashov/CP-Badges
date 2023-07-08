@@ -1,0 +1,9 @@
+[Unit]
+Description=CP-Badges.
+
+[Service]
+Type=simple
+ExecStart=/home/CP-Badges/prod-run.sh
+
+[Install]
+WantedBy=graphical.target

@@ -3,7 +3,7 @@ Description=CP-Badges.
 
 [Service]
 Type=simple
-ExecStart=/home/CP-Badges/prod-run.sh
+ExecStart=/home/CP-Badges/prod_run.sh
 
 [Install]
 WantedBy=graphical.target

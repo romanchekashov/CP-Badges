@@ -6,3 +6,4 @@ gunicorn
 pybadges==3.0.0
 html.parser==0.2
 dataclasses==0.6
+waitress==2.1.2

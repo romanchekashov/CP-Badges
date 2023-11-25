@@ -12,13 +12,33 @@ This repo helps you to create your custom profile badges with Max rating in Code
 
 ---
 
-## 🛠 Installation
-
-Use the package manager [pip3](https://pip.pypa.io/en/stable/) to install requirements file first.
-
-```bash
-pip3 install requirements.text
+## 🛠 Installation & Deploy on Ubuntu 22
+```shell
+apt install python3-pip
+pip install -r requirements.txt
 ```
+```shell
+cp my-cp-badges-server-py.service /usr/lib/systemd/system/
+sudo systemctl enable my-cp-badges-server-py
+sudo systemctl daemon-reload
+
+sudo systemctl status my-cp-badges-server-py
+sudo systemctl start my-cp-badges-server-py
+sudo systemctl stop my-cp-badges-server-py
+sudo systemctl restart my-cp-badges-server-py
+
+systemctl --type=service --state=running
+
+journalctl -u my-cp-badges-server-py     # to see full log from systemctl status service
+journalctl -u my-cp-badges-server-py -b  # to see only log messages for the current boot
+journalctl --vacuum-time=1d     # Retain only the past one day
+journalctl --vacuum-size=500M   # Retain only the past 500 MB
+```
+#### systemd - Process management
+- [systemd: System and Service Manager](https://systemd.io/)
+- [Use systemd to Start a Linux Service at Boot](https://www.linode.com/docs/guides/start-service-at-boot/)
+
+---
 
 ## Endpoints
 

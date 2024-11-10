@@ -1,0 +1,13 @@
+services:
+  cp_badges:
+    platform: linux/amd64 #Required for Mac M1 PRO
+    container_name: cp_badges
+    build:
+      context: .
+      dockerfile: ./py.Dockerfile
+    image: cp_badges:latest
+    restart: unless-stopped
+    environment:
+      - PORT=3020
+    ports:
+      - 3020:3020

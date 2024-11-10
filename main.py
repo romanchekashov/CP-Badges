@@ -68,10 +68,9 @@ def home():
 def page_not_found(error):
     return "This user doesn't exists."
 
-
-if __name__ == "__main__":
-    # app.debug = True
-    app.run()
+# if __name__ == "__main__":
+#     # app.debug = True
+#     app.run()
 
 def create_app():
     return app

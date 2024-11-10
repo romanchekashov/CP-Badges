@@ -12,6 +12,13 @@ This repo helps you to create your custom profile badges with Max rating in Code
 
 ---
 
+## Deploy
+```shell
+docker compose up --build -d  # build and start Dockers
+docker compose up -d          # Start Docker
+docker compose down           # Stop Docker
+```
+
 ## 🛠 Installation & Deploy on Ubuntu 22
 ```shell
 apt install python3-pip
